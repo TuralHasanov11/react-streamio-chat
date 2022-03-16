@@ -10,7 +10,7 @@ function Auth(){
     const authCtx = useContext(AuthContext)
 
     const [form, setForm] = useState({
-        fullName:'Test1',username:'Test1',password:'password',confirmPassword:'password',avatarURL:'https://resizing.flixster.com/HSD7Hd7RAIMtBuhEuAVClOw7Sjo=/300x300/v2/https://flxt.tmsimg.com/assets/p17592918_b_h9_aa.jpg'
+        fullName:'',username:'',password:'',confirmPassword:'',avatarURL:''
     })
 
     const [isRegister, setIsRegister] = useState(true)
@@ -49,7 +49,7 @@ function Auth(){
             <div className="auth__form-container_fields">
                 <div className="auth__form-container_fields-content">
                     <p>{isRegister ? 'Sign Up' : 'Sign In'}</p>
-                    <form onSubmit={submitForm}>
+                    <form onSubmit={submitForm} autoComplete="off">
                         {isRegister && (
                             <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="fullName">Full Name</label>
@@ -88,7 +88,7 @@ function Auth(){
                             <label htmlFor="password">Password</label>
                             <input name="password"
                                 type='password'
-                                placeholder="password"
+                                placeholder="Password"
                                 onChange={handleChange}
                                 value={form.password}
                                 required
@@ -123,9 +123,11 @@ function Auth(){
             <div className="auth__form-container_info">
                 {/* <img src={RegisterImage} alt="" /> */}
             </div>
+            <div className="video-container">
             <video autoPlay muted loop id="myVideo">
                 <source src={Video} type="video/mp4" />
             </video>
+            </div>
         </div>
     )
 

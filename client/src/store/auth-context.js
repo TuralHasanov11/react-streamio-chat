@@ -34,7 +34,6 @@ export function AuthContextProvider(props){
     }
 
     async function authenticate({formData, isRegister}){
-
         const URL = 'http://localhost:5000/auth'
 
         try {

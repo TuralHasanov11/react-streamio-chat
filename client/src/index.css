@@ -968,10 +968,11 @@ body {
 }
 
 .team-channel-list__header__title {
+  font-weight: bolder;
   font-family: Helvetica Neue, sans-serif;
-  font-size: 13px;
+  font-size: 16px !important;
   line-height: 16px;
-  height: 16px;
+  height: 20px;
   color: rgba(255, 255, 255, 0.66);
   margin-bottom: 10px;
 }
@@ -1838,7 +1839,7 @@ div.rta__autocomplete.str-chat__emojisearch {
   color: #eee;
 }
 
-#myVideo {
+/* #myVideo {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
@@ -1848,6 +1849,40 @@ div.rta__autocomplete.str-chat__emojisearch {
   top: 0;
   bottom: 0;
   z-index: -1;
+} */
+
+.video-container {
+  z-index: -1;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
 }
 
 .str-chat__avatar-fallback{
