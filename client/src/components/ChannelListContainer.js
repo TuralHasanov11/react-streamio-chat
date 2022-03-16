@@ -15,7 +15,7 @@ const Sidebar = ({logout})=>(
             </div>
         </div>
         <div className="channel-list__sidebar__icon2">
-            <div className="icon1__inner" onClick={logout}>
+            <div className="icon1__inner" title='Sign out' onClick={logout}>
                 <img src={LogoutIcon} alt="Logout" width="30" />
             </div>
         </div>
@@ -24,7 +24,7 @@ const Sidebar = ({logout})=>(
 
 const CompanyHeader = () => (
     <div className="channel-list__header">
-        <p className="channel-list__header__text">ChatApp</p>
+        <p className="channel-list__header__text">React-Streamio</p>
     </div>
 )
 

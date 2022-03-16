@@ -1,3 +1,4 @@
+
 import { useContext, useEffect } from 'react'
 import { StreamChat} from 'stream-chat'
 import {Chat} from 'stream-chat-react'
@@ -10,9 +11,10 @@ import AuthContext from './store/auth-context'
 
 const cookies = new Cookies();
 
-const apiKey=process.env.STREAM_API_KEY
+const apiKey=process.env.REACT_APP_STREAM_API_KEY
 const authToken = cookies.get("token");
 const user = cookies.get('user')
+console.log(apiKey)
 
 const client = StreamChat.getInstance(apiKey);
 

@@ -17,7 +17,7 @@ export function AuthContextProvider(props){
 
     const [token, setToken] = useState(cookies.get('token'))
     const [user, setUser] = useState(cookies.get('user'))
-    console.log(cookies.get('user'))
+
     const isAuth = token
 
     function connectUser(client){
